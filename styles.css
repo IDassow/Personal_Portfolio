@@ -1,4 +1,60 @@
-
+:root {
+    --spacing-1: 8px;
+    --spacing-2: 12px;
+    --spacing-3: 16px;
+    --spacing-4: 24px;
+    --border-radius: 12px;
+    --font-color: #323232;
+}
+body{
+    margin: 0;
+    padding: 0 var(--spacing-3);
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
 h1{
     font-family: 'Impact';
+}
+header{
+    display: inline;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-3) 0;
+}
+ul{
+   display: flex;
+    list-style-type: none;
+    padding: 0;
+    align-items: center;
+    margin: 0;
+    margin-left: auto;
+}
+.nav-tab{
+    margin: var(--spacing-1);
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+
+
+#skills-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 100%;
+}
+
+.icon img{
+    max-width: 64px;
+    max-height: 64px;
+}
+.i-cpp{
+    image-rendering: auto;
 }
