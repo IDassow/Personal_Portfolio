@@ -13,7 +13,7 @@
         <nav>
             <h1>Ian Dassow</h1>
             <ul>
-                <li class="nav-tab"><a href="#aboutme" rel="noopener noreferrer">AboutMe</a></li>
+                <li class="nav-tab"><a href="#aboutme" rel="noopener noreferrer">About Me</a></li>
                 <li class="nav-tab"><a href="#projects" rel="noopener noreferrer">Projects</a></li>
                 <li class="nav-tab"><a href="#skills" rel="noopener noreferrer">Skills</a></li>
                 <li class="nav-tab"><a href="http://" rel="noopener noreferrer">Contact</a></li>
@@ -24,34 +24,56 @@
         <section id="aboutme">
             <div class="aboutme-container">
                 <div class="aboutme-log">
-                    <h2>AboutMe</h2>
-
+                    <h2>About Me</h2>
+                    <p>
+                        I am a dedicated Software Developer with a passion for developing, 
+                        innovating and implementing software solutions. Proficient in a variety of 
+                        programming languages and strive to create robust, scalable, and efficient applications tailored to meet client needs.
+                    </p>
+                    <p>
+                        I have experience working collaboratively in agile environments, contributing to all phases of the
+                        development lifecycle from initial requirements gathering to deployment and maintenance. 
+                        My strong analytical skills and problem-solving capabilities enable me to tackle complex technical challenges 
+                        and deliver high-quality solutions on time and within budget.
+                    </p>
+                    <p>
+                        Proficient in [Java, C#, C++, Python, JavaScript]
+                        Experience in [MongoDB, Express, React, Node.js, Spring Boot]
+                        Background in database management (MySQL, MongoDB)
+                        Adept at working in agile methodologies and cross-functional team.
+                    </p>
+                    <p>Its been <span id="time-container"></span> seconds since the project started!</p>
                 </div>
-                <img src="" alt="either a place holder or an image of project ceator">
+                <img src="" alt="either a place holder or an image of project ceator" class="profile-pic">
             </div>
         </section>
         <section id="projects">
             <div class="projects-container">
                 <h2>Projects</h2>
+                <p>disclaimer: images are not accurate to the actual project, just a representation of what they are</p>
                 <details class="project">
-                    <summary class="proj-title">Epcot Center</summary>
+                    <summary class="proj-title">Movie Watchlist ASP.NET Website</summary>
+                    <img src="https://tvtime.zendesk.com/hc/article_attachments/1500003946661/Screen_Shot_2021-03-11_at_8.19.36_PM.png" alt="tvtime" class="project-img">
                     <p>
-                        Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, 
-                        international pavilions, award-winning fireworks and seasonal special events.
+                        Simple project that demonstrates database manipulation using ASP and basic website navigation/flow. 
+                        Mimics a website that lets the user track movies they have watched or are planing on watching. 
+                        Having basic login functionality (dont use any real information) , adding movies to users watchlist, 
+                        and viewing movie contents (title, rating, director, description, and embedded trailer for movie).
                     </p>
                 </details>
                 <details class="project">
-                    <summary class="proj-title">Epcot Center</summary>
+                    <summary class="proj-title">SpaceGame SFML</summary>
+                    <img src="https://preview.redd.it/ko909mx3jiv31.png?auto=webp&s=19dfe7abc20139c49e1ed84b667b632396c48c64" alt="random image of SpaceGame" class="project-img">
                     <p>
-                        Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, 
-                        international pavilions, award-winning fireworks and seasonal special events.
+                        Galaxica/Space Invaders Clone made using SFML.
                     </p>
                 </details>
                 <details class="project">
-                    <summary class="proj-title">Epcot Center</summary>
+                    <summary class="proj-title">Cheapest Flights Webscrapper</summary>
+                    <img src="https://content.r9cdn.net/rimg/provider-logos/common/socialmedia/cheapflights-logo.png?width=1200&height=630&crop=false" alt="cheapflights-logo" class="project-img">
                     <p>
-                        Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, 
-                        international pavilions, award-winning fireworks and seasonal special events.
+                        Using Selenium api to webscrape across a website to find the Cheapest flights based on user conditions.
+                        Desktop based application using custom tkinter for a graphical user interface.
                     </p>
                 </details>
 
@@ -73,7 +95,23 @@
         </section>
     </main>
     <footer>
-
+        <p>Yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present</p>
+        - Master Oogway (Kung Fu Panda)
     </footer>
+    <script>
+    const timeContainer = document.getElementById("time-container");
+    const PROJECT_DAY = "05-29-2025";
+    const PROJECT_DATE = new Date(PROJECT_DAY);
+    const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+    setInterval(() => {
+      const now = new Date();
+      const difference = Math.floor(
+        (now.getTime() - PROJECT_DATE.getTime()) / 1000
+      );
+
+      timeContainer.innerText = intlNumberFormatter.format(difference);
+    }, 1000);
+  </script>
 </body>
 </html>

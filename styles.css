@@ -1,3 +1,7 @@
+html{
+font-size: 16px;
+}
+
 :root {
     --spacing-1: 8px;
     --spacing-2: 12px;
@@ -13,9 +17,28 @@ body{
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    
 }
-h1{
-    font-family: 'Impact';
+p{
+    font-family: "Carrois Gothic",sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+h1 {
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    font-size: 45px;
+    text-transform:uppercase;
+}
+h2{
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: 35px;
+}
+summary{
+    font-family: 'Lexend Mega';
+    font-size: 1.5rem;
 }
 header{
     display: inline;
@@ -38,12 +61,23 @@ ul{
     margin: var(--spacing-1);
 }
 li {
-    display: list-item;
-    text-align: -webkit-match-parent;
-    unicode-bidi: isolate;
+    
+    font-family: "Poppins",sans-serif;
+    font-size: 1.25rem;
+    text-decoration: none;
 }
-
-
+.aboutme-container{
+    display: flex;
+}
+.profile-pic{
+    width: 300px;
+    border-radius: var(--border-radius);
+    flex-shrink: 0;
+}
+.project-img{
+    max-width: 500px;
+    max-height: 300px;
+}
 #skills-container{
     display: flex;
     flex-wrap: wrap;
@@ -57,4 +91,13 @@ li {
 }
 .i-cpp{
     image-rendering: auto;
+}
+
+footer{
+    margin-top: 150px;
+    padding: var(--spacing-2) 0;
+    text-align: center;
+    font-family: "Carrois Gothic",sans-serif;
+    font-size: 16px;
+    font-weight: 500;
 }
